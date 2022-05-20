@@ -71,4 +71,4 @@ export class AppService extends StateController<AppState> {
 ### Launching Apps
 
 `fugureApi`: dotnet run
-`anngularApp`: npm start
+`angularApp`: npm start
