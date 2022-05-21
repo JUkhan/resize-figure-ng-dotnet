@@ -72,7 +72,6 @@ export class CanvasComponent implements OnInit, OnDestroy {
       .on('end', function (d) {
         select(this).attr('cursor', 'default');
         dragStart = false;
-        g.attr('z-index', '1');
       })
       .on('start', function (d) {
         cp = [d.sourceEvent.offsetX, d.sourceEvent.offsetY];
@@ -83,7 +82,6 @@ export class CanvasComponent implements OnInit, OnDestroy {
         cp.push(Number(g.select('.rect1').attr('height')));
         select(this).attr('cursor', 'move');
         dragStart = true;
-        g.attr('z-index', '101');
       });
 
     const resize = drag().on('drag', function (d) {

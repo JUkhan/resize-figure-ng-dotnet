@@ -26,7 +26,7 @@ public class FigureController : ControllerBase
 }
 
 ```
-### `angularApp` consumes `figureApi` for initially loading figure data and later updating figures' position and size. Here is D3 for rendering figures inside `canvas.component`.
+### `angularApp` consumes `figureApi` for initially loading figure data and later updating figures' position and size. Here is D3 for rendering figures inside `canvas.component` and necessary logic for figures dragging and resizing.
 
 ### api.service
 ```ts
@@ -42,7 +42,7 @@ export class ApiService {
   }
 }
 ```
-There is another `app.service` for app state management that also have debouncing update method. That notifies `canvas.component` whenever necessary state changes.
+There is another `app.service` for app state management having debouncing update method. This service notifies `canvas.component` whenever necessary state changes.
 
 ### app.service
 ```ts
@@ -68,7 +68,11 @@ export class AppService extends StateController<AppState> {
   }
 }
 ```
+
 ### Launching Apps
 
-`fugureApi`: dotnet run
-`angularApp`: npm start
+`figureApi`: dotnet run
+
+`angularApp`: npm i 
+
+ npm start
